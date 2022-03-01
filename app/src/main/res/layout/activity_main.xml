@@ -11,7 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
-        android:textSize="40sp"
+        android:textSize="35sp"
+        android:background="@drawable/card_background2"
+        android:textColor="#49fff0"
+        android:elevation="5dp"
         android:text="What is the current year?"/>
 
     <TextView
@@ -21,5 +24,8 @@
         android:gravity="center"
         android:text="2022"
         android:visibility="invisible"
-        android:textSize="40sp" />
+        android:background="@drawable/card_background"
+        android:textColor="#fca2ed"
+        android:elevation="5dp"
+        android:textSize="35sp" />
 </RelativeLayout>
