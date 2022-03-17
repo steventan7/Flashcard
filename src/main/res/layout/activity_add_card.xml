@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCardActivity">
+
+    <EditText
+        android:id="@+id/edit_question"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:hint="Enter your question here"
+        android:inputType="textMultiLine"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edit_answer"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="156dp"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:hint="Enter your answer here"
+        android:inputType="textMultiLine"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="-28dp"
+        android:layout_marginTop="434dp"
+        android:layout_marginEnd="262dp"
+        android:layout_marginBottom="-2dp"
+        android:src="@drawable/icon_download" />
+
+    <ImageView
+        android:id="@+id/exit"
+        android:layout_width="110dp"
+        android:layout_height="87dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="243dp"
+        android:layout_marginTop="434dp"
+        android:layout_marginEnd="-42dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/icon_exit" />
+</RelativeLayout>
