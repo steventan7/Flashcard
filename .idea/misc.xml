@@ -3,9 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/drawable/card_background.xml" value="0.2140625" />
         <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/drawable/card_background2.xml" value="0.2140625" />
-        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/drawable/icon_download.xml" value="0.2703125" />
+        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/drawable/icon_plus.xml" value="0.2703125" />
+        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/drawable/toast_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/layout/activity_add_card.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/layout/activity_main.xml" value="0.2398034398034398" />
+        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/layout/activity_main2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/layout/toast.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Steven Tan/AndroidStudioProjects/Flashcard/app/src/main/res/layout/toast_layout.xml" value="0.536" />
       </map>
     </option>
   </component>
