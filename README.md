@@ -7,7 +7,7 @@ Creates a flashcard app that allows the user to create, edit, or delete from the
 
 ### App Walk-though
 
-<img src="https://recordit.co/lGsrSYbfQc" width=200><br>
+<img src="http://g.recordit.co/lGsrSYbfQc.gif" width=200><br>
 
 ## Required
 - [x] User can create a card and still see their created card when the app is relaunched.
