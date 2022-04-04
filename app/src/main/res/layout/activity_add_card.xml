@@ -32,31 +32,31 @@
 
     <ImageView
         android:id="@+id/save"
-        android:layout_width="177dp"
-        android:layout_height="wrap_content"
+        android:layout_width="164dp"
+        android:layout_height="267dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="-28dp"
-        android:layout_marginTop="434dp"
-        android:layout_marginEnd="262dp"
-        android:layout_marginBottom="-2dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="453dp"
+        android:layout_marginEnd="267dp"
+        android:layout_marginBottom="11dp"
         android:src="@drawable/icon_download" />
 
     <ImageView
         android:id="@+id/exit"
-        android:layout_width="110dp"
-        android:layout_height="87dp"
+        android:layout_width="wrap_content"
+        android:layout_height="268dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginStart="243dp"
-        android:layout_marginTop="434dp"
+        android:layout_marginTop="450dp"
         android:layout_marginEnd="-42dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="13dp"
         android:src="@drawable/icon_exit" />
 </RelativeLayout>

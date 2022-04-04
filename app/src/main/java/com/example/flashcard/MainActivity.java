@@ -3,9 +3,13 @@ package com.example.flashcard;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewAnimationUtils;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -36,8 +40,19 @@ public class MainActivity extends AppCompatActivity {
         TextView question = findViewById(R.id.flashcard_question);
         TextView answer = findViewById(R.id.flashcard_answer);
         question.setOnClickListener(v -> {
+
+            int cx = answer.getWidth() / 2;
+            int cy = answer.getHeight() / 2;
+
+            float finalRadius = (float) Math.hypot(cx, cy);
+
+            Animator anim = ViewAnimationUtils.createCircularReveal(answer, cx, cy, 0f, finalRadius);
+
             question.setVisibility(View.INVISIBLE);
             answer.setVisibility(View.VISIBLE);
+
+            anim.setDuration(500);
+            anim.start();
         });
         answer.setOnClickListener(v -> {
             question.setVisibility(View.VISIBLE);
@@ -47,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.plus).setOnClickListener(v -> {       // button that goes to addCardActivity
             Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
             MainActivity.this.startActivityForResult(intent,100);
+            overridePendingTransition(R.anim.right_in, R.anim.left_in);
         });
 
         findViewById(R.id.edit).setOnClickListener(v -> {       // button that allows you to edit the current card
@@ -73,6 +89,29 @@ public class MainActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.next).setOnClickListener(v -> {           // button that goes to next card
+            final Animation leftOutAnim = AnimationUtils.loadAnimation(v.getContext(), R.anim.left_in);
+            final Animation rightInAnim = AnimationUtils.loadAnimation(v.getContext(), R.anim.right_in);
+
+            leftOutAnim.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+                    // this method is called when the animation first starts
+                    overridePendingTransition(R.anim.left_in, R.anim.right_in);
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    // this method is called when the animation is finished playing
+                    findViewById(R.id.flashcard_question).startAnimation(rightInAnim);
+                    overridePendingTransition(R.anim.left_in, R.anim.right_in);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
+
             if (allFlashcards.size() == 0) {
                 return;
             }
@@ -89,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
 
             ((TextView) findViewById(R.id.flashcard_question)).setText(flashcard.getAnswer());
             ((TextView) findViewById(R.id.flashcard_answer)).setText(flashcard.getQuestion());
+            findViewById(R.id.flashcard_question).startAnimation(leftOutAnim);
+            findViewById(R.id.flashcard_question).startAnimation(rightInAnim);
         });
 
     }
